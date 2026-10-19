@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Akses Project Brighton</title>
+  
+  <!-- Font Google: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Navigasi -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="image/logo-brighton.png" alt="Brighton Real Estate" class="brand-logo" />
+        <div class="brand-divider"></div>
+        <span class="portal-badge">Pusat Link & Aplikasi</span>
+      </div>
+
+      <!-- Kolom Pencarian Cepat -->
+      <div class="search-wrapper">
+        <i class="ph ph-magnifying-glass search-icon"></i>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Cari project, materi, kata sandi, link, atau divisi..." 
+          autocomplete="off"
+        />
+        <button id="clearBtn" class="clear-icon" title="Hapus Pencarian"><i class="ph ph-x"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Konten Utama -->
+  <main class="page-container">
+    <div class="info-bar">
+      <p class="info-text">Klik tombol pada masing-masing kartu untuk langsung membuka halaman atau menyalin akses login.</p>
+      <span class="count-tag"><strong id="cardCount">13</strong> Project & Modul Siap Digunakan</span>
+    </div>
+
+    <div class="cards-grid" id="projectsGrid">
+
+      <!-- PROJECT 1 -->
+      <div class="card" data-keywords="project 1 training mobile web hrd fat finance login password siftiyan admin">
+        <div class="card-top">
+          <span class="tag-number">Project 01</span>
+          <h2 class="card-title">Aplikasi Training (Mobile & Web)</h2>
+          <p class="card-desc">Portal pelatihan interaktif untuk tim HRD dan Finance (FAT).</p>
+        </div>
+
+        <div class="login-box">
+          <!-- Mobile Training -->
+          <div class="login-item">
+            <div class="login-head">
+              <strong>1. Training Mobile</strong>
+              <a href="https://brighton-mobile.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-open">
+                Buka Website <i class="ph-bold ph-arrow-square-out"></i>
+              </a>
+            </div>
+            <div class="acc-row">
+              <span class="acc-label">User:</span>
+              <span class="acc-val" title="siftiyan.hrd@brighton.internal">siftiyan.hrd@brighton.internal</span>
+              <button class="btn-copy" data-copy="siftiyan.hrd@brighton.internal">Salin</button>
+            </div>
+            <div class="acc-row">
+              <span class="acc-label">Pass:</span>
+              <span class="acc-val">Br!ght0n#HRD_982$KxL</span>
+              <button class="btn-copy" data-copy="Br!ght0n#HRD_982$KxL">Salin</button>
+            </div>
+          </div>
+
+          <!-- Web Training FAT -->
+          <div class="login-item mt-2">
+            <div class="login-head">
+              <strong>2. Training Web (FAT)</strong>
+              <a href="https://brighton-webs.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-open">
+                Buka Website <i class="ph-bold ph-arrow-square-out"></i>
+              </a>
+            </div>
+            <div class="acc-row">
+              <span class="acc-label">User:</span>
+              <span class="acc-val">admin.fat@brighton.co.id</span>
+              <button class="btn-copy" data-copy="admin.fat@brighton.co.id">Salin</button>
+            </div>
+            <div class="acc-row">
+              <span class="acc-label">Pass:</span>
+              <span class="acc-val">Br1ght0n#F@T_Tr41n!ng2026$</span>
+              <button class="btn-copy" data-copy="Br1ght0n#F@T_Tr41n!ng2026$">Salin</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="card" data-keywords="project 2 ceklist onboarding karyawan baru rahma dinda fikri tria trainer leader hoa hrd">
+        <div class="card-top">
+          <div class="flex-between">
+            <span class="tag-number">Project 02</span>
+            <span class="status-live">Aktif Digunakan ✅</span>
+          </div>
+          <h2 class="card-title">Ceklist Onboarding Karyawan</h2>
+          <p class="card-desc">Sistem pemantauan alur orientasi karyawan baru berdasarkan 4 level peran.</p>
+        </div>
+
+        <div class="role-grid">
+          <div class="role-pill">
+            <span class="role-name">Karyawan</span>
+            <div class="role-auth-wrap">
+              <span class="role-auth">User: <b>Rahma</b> | Pass: <b>123471</b></span>
+              <button class="btn-copy-sm" data-copy="Rahma | 123471">Salin</button>
+            </div>
+          </div>
+          <div class="role-pill">
+            <span class="role-name">Trainer</span>
+            <div class="role-auth-wrap">
+              <span class="role-auth">User: <b>Dinda</b> | Pass: <b>23461</b></span>
+              <button class="btn-copy-sm" data-copy="Dinda | 23461">Salin</button>
+            </div>
+          </div>
+          <div class="role-pill">
+            <span class="role-name">Leader</span>
+            <div class="role-auth-wrap">
+              <span class="role-auth">User: <b>Fikri</b> | Pass: <b>34571</b></span>
+              <button class="btn-copy-sm" data-copy="Fikri | 34571">Salin</button>
+            </div>
+          </div>
+          <div class="role-pill">
+            <span class="role-name">HOA & HRD</span>
+            <div class="role-auth-wrap">
+              <span class="role-auth">User: <b>Tria</b> | Pass: <b>45679</b></span>
+              <button class="btn-copy-sm" data-copy="Tria | 45679">Salin</button>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://bit.ly/Onboarding_Brighton" target="_blank" rel="noopener noreferrer" class="btn-full-primary">
+          Masuk ke Halaman Onboarding <i class="ph-bold ph-arrow-square-out"></i>
+        </a>
+      </div>
+
+      <!-- PROJECT 3 (SISTEM BRIEFING PAGI) -->
+      <div class="card" data-keywords="project 3 laporan briefing breafing pagi cabang evaluasi rekap divisi portal_divisi pic_monitoring dashboard belum mengisi">
+        <div class="card-top">
+          <div class="flex-between">
+            <span class="tag-number">Project 03</span>
+            <span class="status-live">Aktif Digunakan ✅</span>
+          </div>
+          <h2 class="card-title">Sistem Laporan Briefing Pagi</h2>
+          <p class="card-desc">Pusat input laporan cabang, monitoring PIC, dan rekap evaluasi seluruh divisi.</p>
+        </div>
+
+        <div class="briefing-group">
+          <!-- 1. Input Laporan Briefing -->
+          <a href="https://script.google.com/macros/s/AKfycbwzzNmsLS-ITor0yqGsDPrIiBBL6EZP4ZttkxUpf1FIllllt2CbYfuBkxNzsd10QypV7Q/exec" target="_blank" rel="noopener noreferrer" class="briefing-link-main">
+            <div class="briefing-icon primary-bg">
+              <i class="ph-bold ph-pencil-line"></i>
+            </div>
+            <div class="briefing-info">
+              <strong class="title-highlight">1. Input Laporan Briefing</strong>
+              <small>Formulir pengisian briefing harian cabang</small>
+            </div>
+            <i class="ph-bold ph-arrow-square-out link-arrow"></i>
+          </a>
+
+          <!-- 2. Rekap Per Divisi -->
+          <a href="https://script.google.com/macros/s/AKfycbwzzNmsLS-ITor0yqGsDPrIiBBL6EZP4ZttkxUpf1FIllllt2CbYfuBkxNzsd10QypV7Q/exec?page=portal_divisi" target="_blank" rel="noopener noreferrer" class="briefing-link-sub">
+            <div class="briefing-icon">
+              <i class="ph-bold ph-buildings"></i>
+            </div>
+            <div class="briefing-info">
+              <strong>2. Rekap Laporan Masuk ke Divisi</strong>
+              <small>Portal evaluasi khusus tiap divisi pusat</small>
+            </div>
+            <i class="ph-bold ph-arrow-square-out link-arrow"></i>
+          </a>
+
+          <!-- 3. List PIC Belum Mengisi -->
+          <a href="https://script.google.com/macros/s/AKfycbwzzNmsLS-ITor0yqGsDPrIiBBL6EZP4ZttkxUpf1FIllllt2CbYfuBkxNzsd10QypV7Q/exec?page=pic_monitoring" target="_blank" rel="noopener noreferrer" class="briefing-link-sub alert-style">
+            <div class="briefing-icon alert-bg">
+              <i class="ph-bold ph-user-focus"></i>
+            </div>
+            <div class="briefing-info">
+              <strong>3. List PIC Belum Mengisi Briefing</strong>
+              <small>Monitoring kedisiplinan pembawa materi</small>
+            </div>
+            <i class="ph-bold ph-arrow-square-out link-arrow"></i>
+          </a>
+
+          <!-- 4. Rekap Semua Laporan (Dashboard) -->
+          <a href="https://script.google.com/macros/s/AKfycbwzzNmsLS-ITor0yqGsDPrIiBBL6EZP4ZttkxUpf1FIllllt2CbYfuBkxNzsd10QypV7Q/exec?page=dashboard" target="_blank" rel="noopener noreferrer" class="briefing-link-sub">
+            <div class="briefing-icon dark-bg">
+              <i class="ph-bold ph-chart-donut"></i>
+            </div>
+            <div class="briefing-info">
+              <strong>4. Rekap Semua Laporan Briefing</strong>
+              <small>Dashboard pemantauan & grafik komprehensif</small>
+            </div>
+            <i class="ph-bold ph-arrow-square-out link-arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="card" data-keywords="project 4 survey kepuasan cabang ke pusat hq brighton penilaian layanan form evaluasi">
+        <div class="card-top">
+          <span class="tag-number">Project 04</span>
+          <h2 class="card-title">Survey Kepuasan Cabang ke Pusat</h2>
+          <p class="card-desc">Kuesioner evaluasi berkala untuk menilai kualitas layanan divisi kantor pusat Brighton.</p>
+        </div>
+        <div class="card-action-single">
+          <a href="https://bit.ly/Survey-Brighton" target="_blank" rel="noopener noreferrer" class="btn-full-dark">
+            Buka Formulir Survey <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 5 -->
+      <div class="card" data-keywords="project 5 google sheet ai pic otomatis jadwal briefing gsheet spreadsheet formula tabel">
+        <div class="card-top">
+          <div class="flex-between">
+            <span class="tag-number">Project 05</span>
+            <span class="status-live">Aktif Digunakan ✅</span>
+          </div>
+          <h2 class="card-title">Spreadsheet AI PIC Otomatis</h2>
+          <p class="card-desc">Tabel otomatisasi penjadwalan & penugasan PIC morning briefing cabang.</p>
+        </div>
+        <div class="card-action-single">
+          <a href="https://docs.google.com/spreadsheets/d/1QqdPvZVKPGJdj2IcJ9NZ5uNVoz4eM1zBDNwxWGY1SiM/edit?gid=948261726#gid=948261726" target="_blank" rel="noopener noreferrer" class="btn-full-sheet">
+            <i class="ph-bold ph-table"></i> Buka Google Sheet PIC
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 6 (DASHBOARD HRD SENDIRI) -->
+      <div class="card" data-keywords="project 6 dashboard hrd portal internal monitoring hrd vercel">
+        <div class="card-top">
+          <span class="tag-number">Project 06</span>
+          <h2 class="card-title">Dashboard HRD</h2>
+          <p class="card-desc">Sistem monitoring terpusat kegiatan dan performa operasional tim HRD.</p>
+        </div>
+        <div class="card-action-single">
+          <a href="https://dashboard-hrd.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-full-primary">
+            Buka Dashboard HRD <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 10 (WEBSITE NOCHE SENDIRI) -->
+      <div class="card" data-keywords="project 10 website noche portal link showcase vercel">
+        <div class="card-top">
+          <span class="tag-number">Project 10</span>
+          <h2 class="card-title">Website Noche</h2>
+          <p class="card-desc">Portal eksternal showcase dan administrasi sistem Noche Brighton.</p>
+        </div>
+        <div class="card-action-single">
+          <a href="https://noche.brighton.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-full-dark">
+            Buka Website Noche <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 7 (BEST + JADWAL + POSTER PEMATERI) -->
+      <div class="card" data-keywords="project 7 best nilai jadwal kelas spreadsheet training nilaibrighton google sheet poster pemateri canva">
+        <div class="card-top">
+          <span class="tag-number">Project 07</span>
+          <h2 class="card-title">Penilaian BEST & Jadwal Kelas</h2>
+          <p class="card-desc">Formulir nilai BEST, master jadwal kelas training, dan desain poster pemateri.</p>
+        </div>
+        <div class="dual-btns">
+          <a href="https://bit.ly/nilaibrighton" target="_blank" rel="noopener noreferrer" class="btn-outline-tile">
+            <div>
+              <strong>Form Input Nilai BEST</strong>
+              <small>bit.ly/nilaibrighton</small>
+            </div>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+
+          <a href="https://docs.google.com/spreadsheets/d/16kPOegCmWT0GABfrXz54kuz9tdOVZrMH8MgxHpf3LPQ/edit?gid=948336496#gid=948336496" target="_blank" rel="noopener noreferrer" class="btn-outline-tile sheet-tile">
+            <div>
+              <strong>Google Sheet Jadwal Kelas</strong>
+              <small>Master Jadwal Training</small>
+            </div>
+            <i class="ph-bold ph-table"></i>
+          </a>
+
+          <a href="https://canva.link/fiupb5hlhtxq38n" target="_blank" rel="noopener noreferrer" class="btn-outline-tile poster-tile">
+            <div>
+              <strong>Desain Poster Pemateri</strong>
+              <small>Template Canva Promosi Sesi</small>
+            </div>
+            <i class="ph-bold ph-image"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- MATERI SOFT SKILL EXISTING (+ KURIKULUM INTI) -->
+      <div class="card" data-keywords="materi soft skill existing canva kurikulum inti pembelajaran communication emotional intelligence initiative ownership attitude professionalism slide presentasi">
+        <div class="card-top">
+          <span class="tag-number">Materi Existing</span>
+          <h2 class="card-title">Materi Soft Skill Existing Staff</h2>
+          <p class="card-desc">Kurikulum pokok dan dek presentasi modul lanjutan staf aktif.</p>
+        </div>
+        <div class="canva-list">
+          <a href="https://canva.link/osr3bxxoheuuv2p" target="_blank" rel="noopener noreferrer" class="canva-btn highlight-curriculum">
+            <span><i class="ph-bold ph-book-open"></i> <b>Kurikulum Inti Pembelajaran</b></span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://canva.link/mb13qkxcgnqi2vn" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>1.</b> Communication & Body Language</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://canva.link/c8khxfvg6hatsey" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>2.</b> Emotional Intelligence</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://canva.link/p5b91xfcc7h3zog" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>3.</b> Initiative and Ownership</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://canva.link/vb3l9j9oy7adufi" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>4.</b> Attitude and Professionalism</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- BOX BARU: NEW STAFF TRAINING & SERTIFIKAT -->
+      <div class="card" data-keywords="new staff baru training sertifikat grooming attitude professionalism communication body language growth mindset continuous improvement canva">
+        <div class="card-top">
+          <div class="flex-between">
+            <span class="tag-number tag-newstaff">New Staff Training</span>
+            <span class="status-live">Silabus Baru</span>
+          </div>
+          <h2 class="card-title">Modul & Sertifikat New Staff</h2>
+          <p class="card-desc">Paket pelatihan orientasi awal karyawan baru beserta sertifikat kelulusan.</p>
+        </div>
+
+        <div class="canva-list">
+          <!-- Sertifikat -->
+          <a href="https://canva.link/19hgftppn34aqda" target="_blank" rel="noopener noreferrer" class="canva-btn cert-highlight">
+            <span><i class="ph-bold ph-certificate"></i> <b>Template Sertifikat New Staff</b></span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <!-- Modul 1 -->
+          <a href="https://canva.link/z579ckgnxy1q0ip" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>1.</b> Grooming Standar Kerja</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <!-- Modul 2 -->
+          <a href="https://canva.link/vovlwicp15jvkhm" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>2.</b> Attitude and Professionalisme</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <!-- Modul 3 -->
+          <a href="https://canva.link/2ql3ijxd1zuuico" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>3.</b> Communication & Body Language</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <!-- Modul 4 -->
+          <a href="https://canva.link/itubd1ey8yzlqxs" target="_blank" rel="noopener noreferrer" class="canva-btn">
+            <span><b>4.</b> Growth Mindset & Continuous Improvement</span>
+            <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT 8 (VISIT CABANG SENDIRI) -->
+      <div class="card" data-keywords="project 8 visit cabang kunjungan kantor operasional standarisasi">
+        <div class="card-top">
+          <span class="tag-number">Project 08</span>
+          <h2 class="card-title">Project VISIT Cabang</h2>
+          <p class="card-desc">Sistem monitoring dan pencatatan agenda visit standarisasi operasional ke cabang.</p>
+        </div>
+        <div class="visit-card-body">
+          <div class="visit-badge-box">
+            <div class="visit-badge-info">
+              <i class="ph-bold ph-map-pin"></i>
+              <div>
+                <strong>Agenda Visit Kantor Cabang</strong>
+                <small>Pengawasan & evaluasi fisik lapangan</small>
+              </div>
+            </div>
+            <span class="badge-prep">Dalam Proses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 9 (SEWA ZOOM HRD SENDIRI) -->
+      <div class="card" data-keywords="project 9 sewa zoom hrd meeting online pinjam pinjamzoomhrd lisensi">
+        <div class="card-top">
+          <div class="flex-between">
+            <span class="tag-number">Project 09</span>
+            <span class="status-live">Aktif Digunakan ✅</span>
+          </div>
+          <h2 class="card-title">Sewa Zoom HRD</h2>
+          <p class="card-desc">Formulir pengajuan dan reservasi lisensi ruang rapat virtual / meeting online HRD.</p>
+        </div>
+        <div class="card-action-single">
+          <a href="https://bit.ly/PinjamZoomHRD" target="_blank" rel="noopener noreferrer" class="btn-full-primary zoom-style">
+            <i class="ph-bold ph-video-camera"></i> Form Pinjam / Sewa Zoom HRD ✅
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tampilan Jika Hasil Pencarian Kosong -->
+    <div id="noResult" class="no-result hidden">
+      <i class="ph ph-magnifying-glass"></i>
+      <h3>Project tidak ditemukan</h3>
+      <p>Tidak ada tautan atau kata sandi yang cocok dengan pencarian Anda. Coba kata kunci lainnya.</p>
+    </div>
+  </main>
+
+  <!-- Notifikasi Toast Berhasil Salin -->
+  <div id="toast" class="toast">
+    <i class="ph-bold ph-check"></i>
+    <span id="toastText">Berhasil disalin!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; Brighton Real Estate &bull; Directory Portal Internal &bull; Akses Cepat Semua Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
