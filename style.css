@@ -628,7 +628,7 @@ body {
   color: #86198f;
 }
 
-/* Canva List */
+/* Canva & Resource Lists */
 .canva-list {
   display: flex;
   flex-direction: column;
@@ -675,6 +675,18 @@ body {
 .cert-highlight:hover {
   border-color: #6366f1;
   color: #312e81;
+}
+
+.sheet-highlight {
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+  color: #065f46;
+}
+
+.sheet-highlight:hover {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #047857;
 }
 
 /* Visit & Zoom Custom */
