@@ -1,6 +1,6 @@
 /**
  * Script Simpel - Portal Akses Project Brighton
- * Fitur: Pencarian Real-Time & Salin Akun (Copy) 1-Klik
+ * Fitur: Pencarian Real-Time, Salin Akun (Copy) 1-Klik, & Auto-Slider Cepat Project 07
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -89,4 +89,67 @@ document.addEventListener('DOMContentLoaded', () => {
     searchProjects();
     searchInput.focus();
   });
+
+  // 4. Auto-Sliding Gallery Cepat untuk Project 07
+  const p7Slider = document.getElementById('p7Slider');
+  const p7Slides = document.getElementById('p7Slides');
+  const p7DotsContainer = document.getElementById('p7Dots');
+
+  if (p7Slider && p7Slides && p7DotsContainer) {
+    const slides = p7Slides.querySelectorAll('.p7-slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let slideInterval;
+
+    // Fallback ekstensi otomatis (.jpg -> .JPG -> .png -> .jpeg -> .webp)
+    slides.forEach((slide) => {
+      const img = slide.querySelector('img');
+      if (!img) return;
+      const exts = ['.JPG', '.png', '.jpeg', '.webp'];
+      let attempt = 0;
+      img.addEventListener('error', () => {
+        if (attempt < exts.length) {
+          const base = img.src.replace(/\.[^/.]+$/, '');
+          img.src = base + exts[attempt++];
+        }
+      });
+    });
+
+    // Buat indikator titik (dots) sesuai jumlah foto
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = 'p7-dot' + (idx === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Foto ${idx + 1}`);
+      dot.addEventListener('click', () => {
+        goToSlide(idx);
+        restartAutoSlide();
+      });
+      p7DotsContainer.appendChild(dot);
+    });
+
+    const dots = p7DotsContainer.querySelectorAll('.p7-dot');
+
+    function goToSlide(index) {
+      currentIndex = (index + totalSlides) % totalSlides;
+      p7Slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+    }
+
+    function startAutoSlide() {
+      slideInterval = setInterval(() => {
+        goToSlide(currentIndex + 1);
+      }, 2000); // Bergeser otomatis setiap 2 detik
+    }
+
+    function restartAutoSlide() {
+      clearInterval(slideInterval);
+      startAutoSlide();
+    }
+
+    // Jeda otomatis saat kursor diarahkan ke foto (desktop)
+    p7Slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    p7Slider.addEventListener('mouseleave', startAutoSlide);
+
+    startAutoSlide();
+  }
 });
